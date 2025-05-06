@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #f9e1e1 0%, #fce8f3 100%);
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #1f2937, #4b5563);
+    color: #fefefe;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background: #374151;
+    color: #fefefe;
+}
+
+body.dark-mode .bg-white {
+    background-color: #6b7280;
+    color: #fefefe;
+}
+
+/* Header and Footer Styling */
+header {
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    height: 15rem;
+}
+
+.h-16 {
+    height: 15rem;
+}
+
+footer {
+    background-color: #fce7f3;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+/* Sidebar Styling */
+aside {
+    background: linear-gradient(180deg, #f472b6 0%, #ec4899 100%);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    transition: width 0.3s ease;
+}
+
+aside a {
+    transition: all 0.3s ease;
+}
+
+aside a:hover {
+    transform: scale(1.05);
+    background-color: #f9a8d4;
+}
+
+aside img {
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Card Styling */
+.bg-white {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    background: linear-gradient(to bottom right, #fff, #fdf2f8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.bg-white:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-color: #ec4899;
+}
+
+.text-blue-700 {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-blue-600 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.text-pink-600 {
+    font-weight: 700;
+}
+
+/* Section Fade-In Animation */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+section:nth-child(1) { animation-delay: 0.2s; }
+section:nth-child(2) { animation-delay: 0.4s; }
+section:nth-child(3) { animation-delay: 0.6s; }
+section:nth-child(4) { animation-delay: 0.8s; }
+section:nth-child(5) { animation-delay: 1.0s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    aside {
+        width: 60px;
+    }
+
+    aside a span {
+        display: none;
+    }
+
+    aside img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ml-24 {
+        margin-left: 60px;
+    }
+
+    .grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    aside {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    aside a {
+        margin: 0 5px;
+    }
+
+    aside img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ml-24 {
+        margin-left: 0;
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* === DARK MODE === */
+body.dark-mode {
+    background: linear-gradient(135deg, #0f172a, #1e293b); /* deep blue-gray gradient */
+    color: #f1f5f9; /* soft light text */
+}
+
+/* Header and Footer in Dark Mode */
+body.dark-mode header,
+body.dark-mode footer {
+    background: rgba(255, 255, 255); /* slightly transparent dark panel */
+    color: #f1f5f9;
+}
+
+/* Card (Menu Items) in Dark Mode */
+body.dark-mode .bg-white {
+    background-color: #334155 !important; /* dark slate */
+    color: #000000;
+    border-color: #475569;
+}
+
+/* Ensure text links in cards/aside are readable */
+body.dark-mode .text-blue-700,
+body.dark-mode .text-blue-600,
+body.dark-mode .text-pink-600 {
+    color: #fbbf24; /* warm gold */
+}
+
+/* Sidebar in Dark Mode */
+body.dark-mode aside {
+    background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
+
+/* Footer Text Fix in Dark Mode */
+body.dark-mode footer p {
+    color: #000000;
+}
+
+/* Button Contrast */
+body.dark-mode button {
+    background-color: #fbbf24;
+    color: #111827;
+}
+
+.header-quote {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #6b7280;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+/* Dark mode style */
+body.dark-mode .header-quote {
+    background-color: rgba(30, 41, 59, 0.85);
+    color: #f8fafc;
+}
+
+/* Responsive typography */
+@media (min-width: 640px) {
+    .header-quote {
+        font-size: 1.2rem;
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-quote {
+        font-size: 1.3rem;
+        max-width: 60%;
+    }
+}
+
+.call-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1d4ed8; /* emerald green */
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+    background-color: #059669; /* darker green on hover */
+}
+
+/* Dark mode style */
+body.dark-mode .call-button {
+    background-color: #fbbf24;
+    color: #111827;
+}
+
+/* === Call for Delivery Button === */
+.call-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1d4ed8;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.call-button:hover {
+    background-color: #059669;
+    transform: scale(1.05);
+}
+
+/* Dark mode style */
+body.dark-mode .call-button {
+    background-color: #fbbf24;
+    color: #111827;
+}
+
+/* === Responsive adjustments for Call Button === */
+@media (max-width: 600px) {
+    .call-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* === Toggle Button Enhancements (assuming it uses a class or id like #darkModeToggle) === */
+#darkModeToggle {
+    cursor: pointer;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+#darkModeToggle:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive toggle button size */
+@media (max-width: 600px) {
+    #darkModeToggle {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.65rem;
+    }
+}
+
+/* Hide text on small screens */
+@media (max-width: 600px) {
+    .call-text,
+    .toggle-text {
+        display: none;
+    }
+
+    .call-button {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #darkModeToggle {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    #darkModeToggle {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .toggle-text {
+        display: none;
+    }
+}
+
